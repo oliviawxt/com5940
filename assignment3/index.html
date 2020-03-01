@@ -19,9 +19,9 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <script>
-        function modal_handle(音乐剧名称, 类型, pic, 最新卡司, 创作者, 评价) {
+        function modal_handle(音乐剧名称, 类型, poster, 最新卡司, 创作者, 评价) {
             $("h3.modal-title").html(`${音乐剧名称}`);
-            $(".modal-body").html(`<img src="${pic}"
+            $(".modal-body").html(`<img src="${poster}"
                                 class="img-responsive"><p>类型：${类型}<br /> 最新卡司：${最新卡司}<br /> 创作者：${创作者}<br />评价：${评价}<br /></p>`);
             $('#popup-photo').modal('show');
         } // end modal_handle function
@@ -106,7 +106,7 @@
                     <a href="#top" style="
                         color: white;
                         vertical-align: middle;
-                        text-decoration: none;">copyright@musicalgoers</a>
+                        text-decoration: none;">返回顶端</a>
                 </p>
             </div>
         </div>
@@ -118,12 +118,12 @@
     <script>
         $(document).ready(function() {
             var counter = 1;
-            var at_getapi = "https://api.airtable.com/v0/appJXivaZeC4A8Je0/%E5%8D%B3%E5%B0%86%E4%B8%8A%E6%BC%94?api_key=keyFmAJ2vrBSZ6kZH";
+            var at_getapi = "https://api.airtable.com/v0/appED80AMlrOHPvXZ/Table%201?api_key=keyFmAJ2vrBSZ6kZH";
             $.getJSON(at_getapi, function(result) {
                 $.each(result.records, function(key, value) {
                     var name = value.fields.音乐剧名称;
                     var image = value.fields.类型;
-                    var desc = value.fields.pic;
+                    var desc = value.fields.poster;
                     var desc = value.fields.最新卡司;
                     var desc = value.fields.创作者;
                     var desc = value.fields.评价;
