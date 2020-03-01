@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'self' data: gap: 'unsafe-inline' 'unsafe-eval';
         style-src * 'self' 'unsafe-inline' 'unsafe-eval' gap:;
         script-src * 'self' 'unsafe-inline' 'unsafe-eval' gap:; frame-src *;">
-    <title>Assignment three musical goers</title>
+    <title>assignment3 Olivia </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/font-lato.css" rel="stylesheet" type="text/css">
     <link href="css/pingendo.css" rel="stylesheet" type="text/css">
@@ -19,10 +19,10 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <script>
-        function modal_handle(name, org_desc, image) {
-            $("h3.modal-title").html(`${name}`);
-            $(".modal-body").html(`<img src="${image}"
-                         class="img-responsive"><p>${org_desc}</p>`);
+        function modal_handle(音乐剧名称, 类型, poster, 最新卡司, 评价) {
+            $("h3.modal-title").html(`${音乐剧名称}`);
+            $(".modal-body").html(`<img src="${poster}"
+                         class="img-responsive"><p>最新卡司：${最新卡司}<br />评价：${评价}<br /></p>`);
             $('#popup-photo').modal('show');
         } // end modal_handle function
 
@@ -67,8 +67,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="text-muted">音乐剧咖 Muscial Goers</h1>
-                    <p>这是一个中国音乐剧同好者的聚集地，旨在为音乐剧爱好者和对音乐剧感兴趣的朋友提供新鲜资讯和有趣见闻。</p>
+                    <h1 class="text-muted">音乐剧咖 Musical Goers</h1>
+                    <br>
+                    <p>从古典到现代，从浪漫到激情，和我们一起探索音乐剧的世界吧！</p>
                     <br>
                     <br>
 
@@ -121,23 +122,23 @@
             var at_getapi = "https://api.airtable.com/v0/appED80AMlrOHPvXZ/Table%201?api_key=keyFmAJ2vrBSZ6kZH";
             $.getJSON(at_getapi, function(result) {
                 $.each(result.records, function(key, value) {
-                    var name = value.fields.音乐剧名称;
-                    var image = value.fields.类型;
-                    var desc = value.fields.poster;
-                    var desc = value.fields.最新卡司;
-                    var desc = value.fields.创作者;
-                    var desc = value.fields.评价;
+                    var 音乐剧名称 = value.fields.音乐剧名称;
+                    var 类型 = value.fields.类型;
+                    var poster = value.fields.poster;
+                    var 最新卡司 = value.fields.最新卡司;
+                    var 评价 = value.fields.评价;
+
                     if (counter == 1) {
                         $("#album_items").append(`<div class="row">`)
                     };
                     $("#album_items").append(`<div class="col-md-4">
                         <div class="thumbnail">
                             <img height="auto" width="100%" src="${poster}"
-                            class="img-responsive" style="max-height:200px;">
+                            class="img-responsive" style="max-height:300px;">
                             <div class="caption">
                                 <h3>${音乐剧名称}</h3>
-                                <p>类型：${类型} </p>
-                                <button class="btn btn-lg btn-primary" onclick="modal_handle('${音乐剧名称}','${poster}''${最新卡司}','${创作者}','${评价}')" data-toggle="modal"
+                                <p> 类型：${类型} </p>
+                                <button class="btn btn-lg btn-primary" onclick="modal_handle('${音乐剧名称}','${poster}','${最新卡司}''${评价}')" data-toggle="modal"
                                  data-id="107" data-body="testing...">View</button>
                             </div>
                         </div>
