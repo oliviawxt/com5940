@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.intechnigence.lesson4" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>lesson4</name>
+    <name>Musical Goers</name>
     <description>
-        Lesson 4 Class Demonstration
+        assignment 3 Olivia's musical goers
     </description>
-    <author email="bernard@cuhk.edu.hk" href="https://github.com/ybsuen">
-        Bernard Suen
+    <author email="1155130054@cuhk.edu.hk" href="https://github.com/oliviawxt">
+        Olivia Xintong Wang
     </author>
     <content src="index.html" />
     <preference name="BackupWebStorage" value="local"/>

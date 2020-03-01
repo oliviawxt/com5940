@@ -151,8 +151,8 @@ header {
 
 .btn-lg,
 .btn-group-lg>.btn {
-    background: white;
-    color: #1a3959;
+    background: #a97e29;
+    color: black;
 }
 
 .img-responsive {
@@ -184,6 +184,7 @@ header {
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
+    background: white
 }
 
 .caption {
@@ -194,6 +195,7 @@ header {
 #album {
     padding-top: 5%;
     padding-bottom: 8%;
+    background: black;
 }
 
 .navbar-default {
